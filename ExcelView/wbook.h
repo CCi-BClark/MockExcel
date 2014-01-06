@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <QTabWidget>
-#include <ssheet.h>
+#include <ExcelView/ssheet.h>
 
 namespace Ui {
 class Wbook;

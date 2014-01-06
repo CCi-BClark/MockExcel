@@ -14,15 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    wbook.cpp \
-    ssheet.cpp \
-    excelmockwidget.cpp
+    ExcelView/wbook.cpp \
+    ExcelView/ssheet.cpp \
+    ExcelView/excelview.cpp
 
 HEADERS  += mainwindow.h \
-    wbook.h \
-    ssheet.h \
-    excelmockwidget.h
+    ExcelView/wbook.h \
+    ExcelView/ssheet.h \
+    ExcelView/excelview.h
 
-FORMS    += \
-    wbook.ui \
-    ssheet.ui
+OTHER_FILES +=
+
+FORMS += \
+    ExcelView/wbook.ui \
+    ExcelView/ssheet.ui

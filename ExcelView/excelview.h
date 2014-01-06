@@ -1,22 +1,24 @@
-#ifndef EXCELMOCKWIDGET_H
-#define EXCELMOCKWIDGET_H
+#ifndef EXCELVIEW_H
+#define EXCELVIEW_H
 
-#include <wbook.h>
-#include <ssheet.h>
-#include <QTabWidget>
+#include <ExcelView/wbook.h>
+#include <ExcelView/ssheet.h>
 #include <QWidget>
 #include <QLayout>
 
-class ExcelMockWidget : public QWidget{
+class ExcelView : public QWidget
+{    
     Q_OBJECT
 public:
-    explicit ExcelMockWidget(QWidget *parent = 0);
-    ~ExcelMockWidget();
+    ExcelView(QWidget *parent = 0);
+    ~ExcelView();
     void addCell(int row, int column, QVariant cell);
     void addSheet(int index, QString title);
     void setSheetProperties(int rows, int columns, QStringList headers);
+
 signals:
     void indexChanged(int);
+
 public slots:
     void emitIndexChange(int index);
     void select(int row, int column);
@@ -26,4 +28,4 @@ private:
     Ssheet *sheet;
 };
 
-#endif // EXCELMOCKWIDGET_H
+#endif // EXCELVIEW_H

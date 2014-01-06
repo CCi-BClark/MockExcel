@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QWidget>
-#include <excelmockwidget.h>
+#include <ExcelView/excelview.h>
+#include <QTableWidgetItem>
 
 class MainWindow : public QMainWindow
 {
@@ -21,7 +22,7 @@ protected slots:
     void select(void);
 
 private:
-    ExcelMockWidget *excel;
+    ExcelView *excel;
     QVBoxLayout *vbox;
     QPushButton *button1;
 };

@@ -2,7 +2,7 @@
 
 MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent){
     QWidget *mainW = new QWidget;
-    excel = new ExcelMockWidget;
+    excel = new ExcelView;
     vbox = new QVBoxLayout;
     button1 = new QPushButton("Select");
 
