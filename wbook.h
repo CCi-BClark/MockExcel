@@ -2,6 +2,7 @@
 #define WBOOK_H
 
 #include <QWidget>
+#include <QTabWidget>
 #include <ssheet.h>
 
 namespace Ui {
@@ -17,6 +18,8 @@ public:
     void createTab(int index, QString title, Ssheet *worksheet);
     void selectTab(int tab);
     void selectCell(int row, int column);
+    int getCurrentTab(void);
+    QWidget *getCurrentWidget(void);
 signals:
     void changedIndex(int);
 public slots:

@@ -47,5 +47,5 @@ void MainWindow::defaultData(){
 }
 
 void MainWindow::select(){
-    excel->select(1,2);
+    excel->select(0,0);
 }

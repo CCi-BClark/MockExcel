@@ -19,8 +19,12 @@ void Wbook::selectTab(int tab){
     ui->tabWidget->setCurrentIndex(tab);
 }
 
-void Wbook::selectCell(int row, int column){
-    ui->tabWidget->currentWidget()->childAt(row+1,column+1)->setFocus();
+int Wbook::getCurrentTab(){
+    return ui->tabWidget->currentIndex();
+}
+
+QWidget* Wbook::getCurrentWidget(){
+    return ui->tabWidget->currentWidget();
 }
 
 void Wbook::emitIndexChange(int index){

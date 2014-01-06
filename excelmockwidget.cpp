@@ -18,7 +18,9 @@ void ExcelMockWidget::addCell(int row, int column, QVariant cell){
 }
 
 void ExcelMockWidget::addSheet(int index, QString title){
-    book->createTab(index, title, sheet);
+    Ssheet *newSheet(sheet);
+    book->createTab(index, title, newSheet);
+    //book->createTab(index, title, sheet);
 }
 
 void ExcelMockWidget::setSheetProperties(int rows, int columns, QStringList headers){
@@ -33,5 +35,8 @@ void ExcelMockWidget::emitIndexChange(int index){
 }
 
 void ExcelMockWidget::select(int row, int column){
-    book->selectCell(row, column);
+    sheet = static_cast<Ssheet*>(book->getCurrentWidget());
+    sheet->selectCell(row, column);
+    //sheet->selectCell(row,column);
+    //book->selectCell(row, column);
 }
